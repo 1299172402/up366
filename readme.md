@@ -21,6 +21,21 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like
 X-Requested-With: XMLHttpRequest
 ```
 
+简化后
+
+```
+{
+	"Accept": "application/json, text/javascript, */*; q=0.01",
+	"Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+	"Host": "live-api.up366.cn",
+	"Origin": "http://me.up366.cn",
+	"Referer": "http://me.up366.cn/center/student/course/liveclasses.html?courseId=89440&createTime=undefined",
+	"User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+	"X-Requested-With": "XMLHttpRequest",
+	"Cookie": "acw_tc=7b39758215802092127684930e1234175f6acbea06d4bbf933eca866daecde; BIGipServercn_liveclass-api_pool=2467735744.38175.0000; SESSION=301df37e-80f0-4372-b3a1-2ab37363de0e"
+}
+```
+
 ***
 
 ## 目标2
