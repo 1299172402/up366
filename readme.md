@@ -41,3 +41,5 @@ X-Requested-With: XMLHttpRequest
 ## 目标2
 
 - [ ] 下载直播课视频
+
+目前已经获取 直播课名称，时间，下载地址 并导出为csv
