@@ -5,6 +5,7 @@ from lxml import html
 import json
 import time
 import datetime
+import csv
 
 # 欢迎文字
 print('\n\n')
@@ -34,7 +35,7 @@ headers = {
 body = {
 	'courseId': '89440',
 	'pager.currentPage': '1',
-	'pager.pageSize': '20',
+	'pager.pageSize': '500',
 	'status': '0'
 }
 
@@ -49,7 +50,7 @@ s = s.find('p').text
 
 # 把json转化为python对象
 s = json.loads(s)
-
+print(s)
 # 简化数据
 course = s['data']['list']
 # print(course)
@@ -66,9 +67,11 @@ for video in course:
 	# print(updateTime)
 	list1.append([video['lcName'],updateTime,vodUrl])
 
-print(list1)
-
-
+# 写入csv
+print('将写入E:/txw.csv')
+with open("E:/txw.csv",'w',newline='') as t:
+    writer=csv.writer(t)
+    writer.writerows(list1)#写入
 
 
 
