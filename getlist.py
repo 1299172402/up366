@@ -3,7 +3,8 @@ from bs4 import BeautifulSoup
 import urllib.request
 from lxml import html
 import json
-# etree = html.etree
+import time
+import datetime
 
 # 欢迎文字
 print('\n\n')
@@ -32,8 +33,8 @@ headers = {
 
 body = {
 	'courseId': '89440',
-	'pager.currentPage': '18',
-	'pager.pageSize': '10',
+	'pager.currentPage': '1',
+	'pager.pageSize': '20',
 	'status': '0'
 }
 
@@ -51,12 +52,19 @@ s = json.loads(s)
 
 # 简化数据
 course = s['data']['list']
-print(course)
+# print(course)
 
 list1 = []
 for video in course:
 	vodUrl = 'http://fs.up366.cn/download/' + video['vodUrl']
-	list1.append([video['lcName'],video['updateTime'],vodUrl])
+	# print(vodUrl)
+	# 注意那个ms 到 s ，坑了好久
+	timeStamp = int(video['updateTime'])/1000
+	# print(timeStamp)
+	timeArray = time.localtime(timeStamp)
+	updateTime = time.strftime("%Y-%m-%d %H:%M:%S", timeArray)
+	# print(updateTime)
+	list1.append([video['lcName'],updateTime,vodUrl])
 
 print(list1)
 
