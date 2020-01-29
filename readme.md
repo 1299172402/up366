@@ -1,8 +1,11 @@
 # 天学网的小尝试哦
 
 下载exe请至release页
+
 > 高速下载链接 https://www.lanzous.com/i8wu8ha
-> 慢速稳定下载 
+
+> 慢速稳定下载 https://github.com/1299172402/up366/releases
+
 
 ## 目标1
 
