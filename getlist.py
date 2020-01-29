@@ -184,7 +184,7 @@ while 1<2:
 
 
 
-
+# pyinstaller --onefile --nowindowed --icon=" D:\Queena\PyCharmProjects\dist1\computer_three.ico" guess_exe.py
 
 
 '''
